@@ -1,17 +1,29 @@
 
 .navigation {
+    z-index: 1;
+    transition: 0.7s;
     background-image: $bgnavfoot;
+    opacity: 0.6;
+    display: flex;
+    justify-content: space-between;
     color: $leuco;
-    height: 8vh;
-    &>ul {
-        padding: $paddingSection;
+    font-weight: 600;
+    height: 15vh;
+    width: 100%;
+    & div {
         @include flex(row, space-between, center);
-        li:not(.lang) {
             text-transform: uppercase;
-            @include fontage('MR', 16px, center, 5px, 0);
+            padding: 0 30px;
+            & {
+                @media screen and (max-width: 768px) {
+                    padding: 0 5px;
+                }
+            }
+            @include fontage('MS', 16px, center, 2px, '');
                 a {
                     text-decoration: none;
                     color: $leuco;
+                    font-weight: 600;
                     &:hover {
                         border-top: 5px solid $bld;
                         padding: 10px 0px;
@@ -27,9 +39,62 @@
                                 &:hover {
                                     color: $bld;
                                 }
+                        }
+                        & ul {
+                            margin: 20px;
+                            @include flex(row, space-between, center);
+                            li:not(.lang) {
+                                text-transform: uppercase;
+                                padding: 0 20px;
+                                @include fontage('MS', 16px, '', 2px, '');
+                                a {
+                                    text-decoration: none;
+                                    color: $leuco;
+                                    &:hover {
+                                        border-top: 5px solid $bld;
+                                        padding: 10px 0px;
+                                    }
+                                }
+                                img {
+                                    width: 50%;
+                                    border-radius: 50%;
+                                }
+                                .logo {
+                                    left: 50px;
+                                }  
+                                &:hover {
+                                    color: $bld;
+                                }
                             }
                         }
-                    }
+                        
+            }
+
+#dropdown {
+    @media screen and (max-width: 768px) {
+        display: block;
+        position: absolute;
+        top: 90px;
+        right: 0;
+        margin: 0;
+        background-color: black;
+        & li {
+            padding: 20px 20px;
+        }
+    }
+}
+                    
+#navbar-btn {
+    position: absolute;
+    margin: 20px;
+    right: 0;
+    font-size: 60px;
+    & {
+        @media screen and (min-width: 769px) {
+        display: none;
+        }
+    }
+}
 
 .lang {
         color: $leuco;

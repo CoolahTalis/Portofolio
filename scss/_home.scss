@@ -1,6 +1,5 @@
 h2 {
-    @include fontage('MS', 1.5rem, left, 4px, 45px);
-    position: absolute;
+    @include fontage("MS", 1.5rem, left, 4px, "");
     width: 27%;
     color: $anth;
     font-weight: 900;
@@ -9,30 +8,109 @@ h2 {
 }
 
 .title {
-    @include fontage('MR', 2.8rem, left, 14px, '');
-    margin-top: 50px;
-    padding-left: 20px;
-
+    @include fontage("MS", 2.5rem, left, "", "");
     & {
-        color: $anth;
-    }
-        &:hover {
-            color: $bld;
+        @media screen and (max-width: 768px) {
+            font-size: 2rem;
         }
+        @media screen and (max-width: 425px) {
+            font-size: 1rem;
+        }
+    }
+    &:hover {
+        color: $bld;
+    }
+}
+
+.boam-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    height: 80vh;
+    animation: move 2s ease-in;
+    @keyframes move {
+        0% {
+            transform: scale(0) rotate(0deg);
+        }
+        100% {
+            transform: scale(1) rotate(0.1deg);
+        }
+    }
+    & {
+        @media (max-width: 768px) {
+            height: 70vh;
+            align-self: center;
+        }
+    }
+}
+
+.circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .circleww1 {
-    @extend %absoluteCenter;
+    animation: circle 29s linear infinite;
+    @keyframes circle {
+        100% {
+            -webkit-transform: rotateZ(360deg);
+        }
+    }
+    & {
+        @media screen and (max-width: 768px) {
+            width: 100%;
+            // height: 90%;
+        }
+        @media screen and (max-width: 425px) {
+            width: 100%;
+            height: 77%;
+        }
+    }
+}
+
+.circleww2 {
+    animation: circle 9s linear;
+    position: absolute;
+    transform: translate(-20%, 53%);
+    & {
+        @media screen and (max-width: 768px) {
+            width: 100%;
+            // height: 90%;
+        }
+        @media screen and (max-width: 425px) {
+            width: 100%;
+            height: 77%;
+        }
+    }
 }
 
 .circle-btn {
-    @extend %absoluteCenter;
-    @include fontage('MR', 2.5rem, center, 5px, '');
-    
-        a {
-            color: $anth;
-            &:hover{
-                color: $bld;
-            }
+    position: absolute;
+    color: white;
+    border:white 4px solid;
+    padding: 10px;
+    background-color: black;
+    opacity: 0.6;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include fontage("MS", 3rem, "", 5px, "");
+    a {
+        color: $anth;
+        &:hover {
+            color: $bld;
         }
-} 
+    }
+    & {
+        @media screen and (max-width: 768px) {
+            font-size: 1rem;
+        }
+        @media screen and (max-width: 500px) {
+            font-size: 0.7rem;
+        }
+    }
+}

@@ -21,6 +21,7 @@ time, mark, audio, video {
 	border: 0;
 	font: inherit;
 	vertical-align: baseline;
+	box-sizing: border-box;
 }
 
 ul {
@@ -29,8 +30,8 @@ ul {
 
 
 /* ????? A CHECK !!!*/
-a {
-	text-decoration: none;
+a:link {
+	text-decoration: none!important;
 }
 
 img,

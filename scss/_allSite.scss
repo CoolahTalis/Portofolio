@@ -1,14 +1,23 @@
 body {
     width: 100%;
-    background-image: url(/img/bgboam.jpg);
+    height: auto;
+    background-image: url(/img/backdev.png);
     background-size: cover;
     background-attachment: fixed;
 }
 
-// A PROPOS !
+section {
+    padding: 10px 0px;
+}
 
-.img-container {      
-    // @extend %absoluteCenter;   
+#backdev {
+    width: 100%;
+    background-image: url(/img/backdev.png);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.img-container {
     display: inline-flex;
 }
 
@@ -16,71 +25,53 @@ body {
     display: inline-flex;
     justify-content: end;
     top: 10px;
-
-        &>img {
-            width: 30vh;
-        }
+    & img {
+        width: 30vh;
+    }
 }
 
 .speech {
     display: inline-flex;
     border-radius: 10px;
-    background-color: rgba($color: $anth, $alpha: 0.7);
- 
-        &>p {
-            width: 50vw;
-            @include fontage('MS', 2rem, justify, '', '');
-            padding: 30px;
-            }
+    background-color: rgba($color: $anth, $alpha: 0.2);
+    & p {
+        // @include fontage("MS", 2rem, justify, "", "");
+        font-family: "Cursive";
+        font-size: 1.5rem;
+        font-weight: 900;
+        padding: 20px 10px;
+    }
 }
 
-// Formulaire de la page CONTACT 
-
-.circleww4 img{   
-    position: absolute;
-    width: 25vw;
-    left: 23%;
-    top: 50%;
-    transform: translate(-50%, -50%); 
-}
+// ------------------------------------------------- FORMULAIRE DE LA PAGE CONTACT ----------------------------
 
 .form-container {
-    position: absolute;
-    flex-direction: row;
+    display: flex;
+    justify-content: center;
     background-color: rgba($color: $anth, $alpha: 0.5);
     border-radius: 0 0 0 10px;
-    width: 54vw;
-    height: 82vh;
-    right: 0;
-    padding-bottom: 20px;
+    height: auto;
 }
 
-// Submit bouton du Form
-    .send {
+.contact {
+    width: 60%;
+    padding: 20px 0;
+    & {
+        @media screen and (max-width: 768px) {
+            width: 90%;
+        }
+    }
+}
+
+// SUBMIT BOUTON DU FORM
+.btns {
     background-color: $anth;
-    @include fontage('MS', 1rem, '', '', '');
+    @include fontage("MS", 1rem, "", "", "");
     color: $leuco;
-    height: 5vh;
-    width: 15vw;
     border-radius: 10px;
     margin-left: 20px;
+    padding: 10px 10px;
 }
-
-    .dlcv{
-    background-color: $anth;
-    @include fontage('MS', 0.8rem, '', '', '');
-    color: $leuco;
-    border-radius: 10px;
-    height: 90vh;    
-    width: 10vw;
-    height: 5vh;
-
-    position: absolute;
-    left: 23%;
-    top: 50%;
-    transform: translate(-50%, -50%); 
-}
-
 
 input:not(#message) {
     margin-top: 50px;
@@ -91,66 +82,112 @@ input:not(#message) {
 }
 
 textarea {
-    margin-top: 60px;
+    margin: 40px;
     margin-left: 20px;
     border-radius: 5px;
     width: 87%;
     resize: none;
 }
 
-// label {
-//     display: block;
+// ----------------------------------------------- CONTAINER DE LA PAGE PORTOFOLIO ------------------------------------------
 
-// }
-
-
-// Container de la page PORTOFOLIO
-
-#folio-container  {
+#folio-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    background-color: black;
+    & img {
+        width: 100%;
+        height: 100%;
+    }
 }
 
-.item1 {
-    display: flex;
+// ----------------------------------------------------- FOLIO PROJECTS CARDS --------------------------------------------------
+
+.items {
+    position: relative;
     width: 590px;
-    height: 340px;
-    border: 16px solid black;
-}
-.item2 {
-    display: flex;
-    width: 590px;
-    height: 340px;
-    border: 16px solid black;
-}
-.item3 {
-    display: flex;
-    width: 590px;
-    height: 340px;
-    border: 16px solid black;
-}
-.item4 {
-    display: flex;
-    width: 590px;
-    height: 340px;
-    border: 16px solid black;
+    height: 440px;
+    border: 10px solid rgb(51, 51, 51);
+    &:hover .image {
+        background-color: black;
+        opacity: 0.3;
+    }
+    &:hover .middle {
+        opacity: 1;
+    }
 }
 
-#folio-container  img{
-    width: 100%;
-    height: 100%;
+.image {
+    display: block;
+    height: auto;
+    object-fit: cover;
+    transition: 0.5s ease;
+    backface-visibility: hidden;
 }
-    
-// Skills Page 
 
-
-.skill-img {
+.middle {
+    transition: 0.5s ease;
+    opacity: 0;
     position: absolute;
-    top: 150px;
-    right: 80px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
 
-        &>img {
-            width: 40vh;
-        }    
+.text {
+    border: 3px solid white;
+    color: white;
+    font-size: 16px;
+    font-family: 'Cursive';
+    padding: 15px 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    &:hover {
+        border: 3px solid #FFD700;
+        color: #FFD700;
+    }
+}
+
+// --------------------------------------------------- Skills --------------------------------------
+
+// .skill-img {
+    //     position: absolute;
+    //     top: 150px;
+    //     right: 80px;
+    
+    //         & img {
+        //             width: 40vh;
+        //         }
+        // }
+        
+        
+// --------------------------------------------------- Mouse  Events --------------------------------------
+
+// trouver soluce pour le pointeur click
+// .mousePointeur {
+//     width: 15px;
+//     height: 15px;
+//     position: absolute;
+//     transform: translate(-50%, -50%);
+//     border: 2px solid white;
+//     border-radius: 50%;
+//     background: brown;
+//     z-index: -1;
+// }
+
+.pageUp {
+    position: fixed;
+    transition: 0.4s;
+    visibility: hidden;
+    right: 20px;
+    bottom: 70px;
+    font-size: 3rem;
+}
+
+.pageUp a i{ 
+    color: red;
+    text-decoration: none;
 }

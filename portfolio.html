@@ -1,0 +1,122 @@
+<!DOCTYPE html> 
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil</title>
+
+    <link rel="stylesheet" href="css/main.min.css"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+
+
+</head>
+<body>
+    <header>
+        <nav class="navigation">
+            <ul>
+                <li class="logo"><a href="/index.html"><img src="img/log0.jpg" alt=""></a></li>
+                <i id="navbar-btn" class="fas fa-bars"></i> 
+            </ul>
+            <ul id="dropdown">
+                <li><a href="#folio-container">Projets</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <!-- <li class="lang">FR | EN</li> -->
+            </ul>
+        </nav>
+    </header>
+    
+    <!-------------------------- "HERO" ------------------------------->
+    
+    <section id="backdev">
+        <div id="about">
+            <div class="bout-container">
+                <div class="pic-me"><img src="img/me.png" alt=""></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ----------------------- PAGE UP ------------------ -->
+    
+    <div class="pageUp">
+        <a href="#backdev"><i class="fas fa-arrow-alt-circle-up "></i></a>
+    </div>
+
+    <!-------------------------- PROJETS ------------------------------->
+
+    <section>
+        <div id="folio-container">
+            <div class="items">
+                <img src="img/labs.png" alt="Avatar" class="image">
+                <div class="middle">
+                    <a href="#"><div class="text">Visiter Arc Labs -<p>Projet HTML5/CSS3 Bootstrap</p></div></a>
+                </div>
+            </div>
+            <div class="items">
+                <img src="img/resto.png" alt="Avatar" class="image">
+                <div class="middle">
+                    <a href="#"><div class="text">Visiter The Resto -<p>Projet HTML5/CSS3 Bootstrap</p></div></a>
+                </div>
+            </div>
+            <div class="items">
+                <img src="img/upd.png" alt="Avatar" class="image">
+                <div class="middle">
+                    <a href="https://lesjus.keurndox.com/"><div class="text">Visiter KeurNdox -<p>Projet PhP / Symfony..</p></div></a>
+                </div>
+            </div>
+            <div class="items">
+                <img src="img/kk.png" alt="Avatar" class="image">
+                <div class="middle">
+                    <a href="https://webapp-b8fa7.web.app/"><div class="text">Visiter Keur Kamite -<p>Projet React Js</p></div></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-------------------------- SKILLS ------------------------------->
+
+    <section id="skills">
+        <div class="form-container">
+            <img src="img/sklb.png" alt="">
+        </div>
+    </section>
+
+
+    <!-------------------------- CONTACT ------------------------------->
+
+    <section id="contact">
+        <div class="form-container">
+            <form action="" class="contact">
+                <!-- <label for="name">Nom</label> -->
+                <input type="text" id="name" name="name" placeholder="Votre Nom ..." required>
+                <input type="text" id="prenom" name="prenom" placeholder="Votre Prénom..." required>
+                <input type="mail" id="email" name="email" placeholder="Votre Email..." required>
+                <input type="text" id="telephone" name="telephone" placeholder="Votre N° de Téléphone">
+                <!-- Choisir <textarea> instead "input type textarea" -->
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Votre Message..."
+                    required></textarea>
+                <div class="">
+                    <button class="btns" type="submit">Envoyer</button>
+                    <button class="btns" type="submit">Téléchargez mon CV</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- ----------------------- Mouse pointeur ------------------ -->
+    <div class="mousePointeur"></div>
+    
+    <footer class="footer">
+        <div class="">
+            <p>Couliga YAMEOGO © 2021</p>
+        </div>
+    </footer>
+</body>
+
+
+<script type="text/javascript" src="js/dist/scripts.min.js"></script>
+<script type="text/javascript" src="js/src/script.js"></script>
+
+</html>
